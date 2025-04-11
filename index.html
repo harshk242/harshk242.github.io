@@ -521,15 +521,12 @@
             .hero-content {
                 flex-direction: column-reverse;
                 text-align: center;
+                gap: 30px;
+                padding-top: 40px;
             }
 
             .hero-text h1 {
-                font-size: 40px;
-            }
-
-            .experience-header, .project-header {
-                flex-direction: column;
-                gap: 5px;
+                font-size: 32px;
             }
 
             .nav-links {
@@ -541,8 +538,11 @@
                 background-color: white;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
+                padding-top: 40px;
+                gap: 20px;
                 transition: all 0.3s ease;
+                z-index: 99;
             }
 
             .nav-links.active {
@@ -552,6 +552,17 @@
             .hamburger {
                 display: block;
             }
+
+            .btn {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+            }
         }
 
         @media (max-width: 768px) {
@@ -559,35 +570,83 @@
                 padding: 15px 0;
             }
 
-            .hero-text h1 {
-                font-size: 32px;
-            }
-
             .section {
-                padding: 70px 0;
+                padding: 50px 0;
             }
 
             .section-title h2 {
-                font-size: 30px;
+                font-size: 28px;
             }
 
             .profile-image {
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
+            }
+
+            .experience-item, .project-item {
+                padding: 20px;
+            }
+
+            .experience-header, .project-header {
+                flex-direction: column;
+                gap: 5px;
+                text-align: left;
+            }
+
+            .tech-tags {
+                flex-wrap: wrap;
+                gap: 8px;
             }
 
             .contact-item {
+                min-width: 100%;
+                padding: 20px;
+            }
+
+            .footer-content {
+                gap: 30px;
+            }
+
+            .footer-section {
                 min-width: 100%;
             }
         }
 
         @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
 
             .social-links {
                 display: none;
+            }
+
+            .experience-title, .project-title {
+                font-size: 20px;
+            }
+
+            .experience-company, .project-subtitle {
+                font-size: 16px;
+            }
+
+            .experience-description ul, .project-description ul {
+                padding-left: 20px;
+            }
+
+            .publication-title {
+                font-size: 18px;
             }
         }
     </style>
